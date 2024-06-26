@@ -47,6 +47,7 @@ def start_server(port, directory):
     with socketserver.TCPServer(("", port), Handler) as httpd:
         print(f"Web服务器已启动，地址：http://localhost:{port}")
         print(f"服务目录: {directory}")
+        print("按 Ctrl+C 停止运行Web服务器。")
         httpd.serve_forever()
 
 def open_browser(port):
